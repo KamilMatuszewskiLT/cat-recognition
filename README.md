@@ -9,3 +9,4 @@ Machine Learning project to recognize cats in images
 
 2. Images
    - Images/ImagePreparation/prepared_images_script.py - Script to prepare images for training.
+   - if "delete" is passed as an argument, it will delete the input images after processing
