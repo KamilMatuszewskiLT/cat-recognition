@@ -8,7 +8,7 @@ def run():
     # Define constants
     input_path = "../input/"
     output_path = "../output/"
-    resize_to = (1000, 750)  # Example resize dimensions
+    resize_to = (500, 325)  # Example resize dimensions
 
     if not os.path.exists(output_path):
         os.makedirs(output_path)
