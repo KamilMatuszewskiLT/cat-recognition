@@ -4,7 +4,7 @@ from PIL import Image
 
 class ImagePreparer:
     @staticmethod
-    def prepare_images(input_images: list, output_path: str, resize_to: tuple[int, int], remove_input=False) -> None:
+    def prepare_images(input_images: list, output_path: str, resize_to_width: int, remove_input=False) -> None:
         image_editor = ImageEditorBuilder.ImageEditorBuilder()
 
         for file in input_images:
@@ -14,7 +14,7 @@ class ImagePreparer:
             converted_image = (
                 image_editor.set_image(image)
                             .convert_to_grayscale()
-                            .resize_image(resize_to)
+                            .resize_image_keep_ratio(resize_to_width)
                             .get_image()
             )
 

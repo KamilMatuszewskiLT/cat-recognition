@@ -8,7 +8,7 @@ def run():
     # Define constants
     input_path = "../input/"
     output_path = "../output/"
-    resize_to = (500, 325)  # Example resize dimensions
+    resize_to_width = 360
 
     if not os.path.exists(output_path):
         os.makedirs(output_path)
@@ -38,7 +38,7 @@ def run():
     ImagePreparer.ImagePreparer.prepare_images(
         all_input_files,
         output_path,
-        resize_to,
+        resize_to_width,
         remove_input=remove_input_files
     )
     print("Images processed and saved to output directory.")

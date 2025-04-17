@@ -16,5 +16,12 @@ class ImageEditorBuilder:
         self.image = self.image.resize(result_size_in_pixels)
         return self
 
+    def resize_image_keep_ratio(self, result_width_in_pixels: int) -> Self:
+        width, height = self.image.size
+        ratio = width / height
+        new_height = int(result_width_in_pixels / ratio)
+        self.image = self.image.resize((result_width_in_pixels, new_height))
+        return self
+
     def get_image(self) -> Image.Image:
         return self.image
